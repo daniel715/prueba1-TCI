@@ -20,32 +20,29 @@ public class Computer {
         }
 
         for (int i = 0; i < rondas.size(); i++) {
-            if(equipoDescansa == null){
-                System.out.print(rondas.get(i));
-            }else{
-                System.out.print(rondas.get(i));
-            }
+            System.out.print(rondas.get(i));
         }
+        if (equipoDescansa != null)
+            System.out.println(" Descansa Equipo " + equipoDescansa);
 
-        System.out.println(" Descansa Equipo " + equipoDescansa);
     }
 
-    public void computeRondasImpar(ArrayList teams){
+    public void computeRondasImpar(ArrayList teams) {
         int indexEquipoDescansa = 0;
-        while(indexEquipoDescansa < teams.size()){
-            ArrayList equiposJugando = deleteElementByIndex(teams ,indexEquipoDescansa );
-            computeRondas(equiposJugando , teams.get(indexEquipoDescansa).toString());
+        while (indexEquipoDescansa < teams.size()) {
+            ArrayList equiposJugando = deleteElementByIndex(teams, indexEquipoDescansa);
+            computeRondas(equiposJugando, teams.get(indexEquipoDescansa).toString());
             indexEquipoDescansa++;
         }
     }
 
-    public ArrayList deleteElementByIndex(ArrayList equipos, int index){
+    public ArrayList deleteElementByIndex(ArrayList equipos, int index) {
         ArrayList salida = new ArrayList();
         for (int i = 0; i < equipos.size(); i++) {
-            if( index != i ){
+            if (index != i) {
                 salida.add(equipos.get(i));
             }
         }
-       return salida;
+        return salida;
     }
 }
