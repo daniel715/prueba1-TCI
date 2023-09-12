@@ -18,13 +18,12 @@ public class Computer {
             }
             bandera++;
         }
-
+        // mostrando partidas
         for (int i = 0; i < rondas.size(); i++) {
             System.out.print(rondas.get(i));
         }
         if (equipoDescansa != null)
             System.out.println(" Descansa Equipo " + equipoDescansa);
-
     }
 
     public void computeRondasImpar(ArrayList teams) {
